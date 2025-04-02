@@ -21,8 +21,11 @@ require_once "../includes/header.php";
     <main>
         <h2>Home Page</h2>
         <p>This is the home page of my website.</p>
-        <p>Here you can find various resources and information.</p>
-        <p>Feel free to explore!</p>
+        <p>Nothing is here yet.</p>
+        <p>Feel free to explore, but you won't get far!</p>
     </main>
     </body>
     </html>
+    <?php
+require_once "../includes/footer.php";
+?>

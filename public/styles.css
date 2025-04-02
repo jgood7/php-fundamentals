@@ -1,0 +1,15 @@
+.site-footer div{
+    color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.site-header {
+    background-color: #575757;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+}
