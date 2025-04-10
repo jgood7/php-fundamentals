@@ -8,6 +8,27 @@
 </head>
 <?php
 require_once __DIR__ . "/../includes/header.php";
+require_once __DIR__ . "/../includes/bootstrap.php";
+
+$collection=$client->sample_supplies->sales;
+$data = $collection->find();
+
+echo "<h1>Data from MongoDB</h1>";
+$pipeline = [
+    ['$group' => [
+        '_id' => '$storeLocation',
+        'count' => ['$sum' => 1]
+    ]],
+    ['$sort' => ['count' => -1]]
+];
+
+$results = $collection->aggregate($pipeline);
+
+echo '<ul>';
+foreach($results as $result){
+    echo '<li>Store Location: ' . htmlspecialchars($result->_id) . " - Count: " . htmlspecialchars($result->count) . "</li>";
+}
+echo '</ul>';
 ?>
 <body>
     
