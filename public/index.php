@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <?php
-require_once "../includes/header.php";
+require_once __DIR__ . "/../includes/header.php";
 ?>
 <body>
     
@@ -64,5 +64,5 @@ require_once "../includes/header.php";
     </body>
     </html>
     <?php
-require_once "../includes/footer.php";
+require_once __DIR__ . "/../includes/footer.php";
 ?>
